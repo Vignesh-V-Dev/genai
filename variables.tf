@@ -12,7 +12,18 @@ variable "instance_type" {
   default = "t2.micro"
   type    = string
 }
-
+variable "subnet_a" {
+  default = "subnet-060c693353c0c13a0"
+  type    = string
+}
+variable "subnet_b" {
+  default = "subnet-022aa2c343679c7e4"
+  type    = string
+}
+variable "subnet_c" {
+  default = "subnet-0f547e72e6bc5b48b"
+  type    = string
+}
 variable "key_name" {
   default = "terraformkp"
   type    = string
