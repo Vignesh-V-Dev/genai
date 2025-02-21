@@ -1,6 +1,6 @@
 resource "aws_instance" "instance_a" { //Instance A
- ami           = var.ami
- instance_type = "t2.micro"
+ ami           = var.ami_id
+ instance_type = var.instance_type
 
  subnet_id = var.subnet_a
 
@@ -22,10 +22,9 @@ resource "aws_instance" "instance_a" { //Instance A
              </html>' | sudo tee /var/www/html/index.html
              EOF
 }
-
 resource "aws_instance" "instance_b" { //Instance B
- ami           = var.ami
- instance_type = "t2.micro"
+ ami           = var.ami_id
+ instance_type = var.instance_type
 
  subnet_id = var.subnet_b
 
@@ -64,8 +63,8 @@ resource "aws_instance" "instance_b" { //Instance B
 }
 
 resource "aws_instance" "instance_c" { //Instance C
- ami           = var.ami
- instance_type = "t2.micro"
+ ami           = var.ami_id
+ instance_type = var.instance_type
 
  subnet_id = var.subnet_c
 
